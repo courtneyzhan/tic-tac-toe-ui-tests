@@ -1,0 +1,33 @@
+load File.dirname(__FILE__) + "/../test_helper.rb"
+
+describe "Basic Board Rules" do
+  include TestHelper
+
+  before(:all) do
+    @driver = Appium::Driver.new(appium_opts).start_driver
+    puts("[DEBUG] Appium session_id: #{@driver.session_id}")
+    store_appium_session_id(@driver.session_id) # save it for future debugging in TestWise, no effect to test execution
+
+    sleep 1
+  end
+
+  after(:all) do
+    driver.quit # unless debugging?
+  end
+  
+  it "Exit player settings" do
+      driver.find_element(:name, "more").click
+      
+      elems = driver.find_elements(:xpath, "//XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeImage/../../../..")
+      puts elems[0].rect
+      # Appium::TouchAction.new(driver).tap(element: elems[0]).perform
+      # TODO find non deprecated version of tap and also find way to tap on sides
+
+      Appium::TouchAction.new(driver).press(x: 45, y: 100).release.perform
+      
+      sleep 10
+      expect(driver.find_elements(:name, "1 Player").count == 0).to be true
+      expect(driver.find_elements(:name, "2 Players").count == 0).to be true
+  end
+
+end

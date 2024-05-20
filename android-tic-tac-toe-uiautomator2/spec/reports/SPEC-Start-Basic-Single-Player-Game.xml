@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Start Basic Single Player Game" tests="5" time="66.90945599996485" failures="0" errors="0" skipped="0" timestamp="2024-01-07T14:22:49+10:00">
+  <testcase name="Start Basic Single Player Game Single Player - Player X Wins Vertically" time="12.051199999987148">
+  </testcase>
+  <testcase name="Start Basic Single Player Game Single Player - Player X Wins Horizontally" time="12.014121000014711">
+  </testcase>
+  <testcase name="Start Basic Single Player Game Single Player - AI Player O Wins  Diagonally" time="11.347414999967441">
+  </testcase>
+  <testcase name="Start Basic Single Player Game Single Player - AI Player X Wins / Diagonally" time="11.057543000031728">
+  </testcase>
+  <testcase name="Start Basic Single Player Game Single Player - Draw" time="11.664581999997608">
+  </testcase>
+</testsuite>

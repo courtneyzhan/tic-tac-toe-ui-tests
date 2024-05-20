@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Simple Game with Two Players" tests="1" time="14.650689999980386" failures="0" errors="0" skipped="0" timestamp="2024-01-07T14:23:56+10:00">
+  <testcase name="Simple Game with Two Players Two Player" time="6.665368000045419">
+  </testcase>
+  <system-out>
+Sully's Turn
+  </system-out>
+</testsuite>
